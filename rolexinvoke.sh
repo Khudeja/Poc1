@@ -21,4 +21,5 @@ curl -s -X GET \
   -H "content-type: application/json"
 echo
 echo
+echo
 
