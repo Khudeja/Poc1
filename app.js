@@ -263,10 +263,23 @@ app.post('/channels/:channelName/chaincodes/:chaincodeName', async function(req,
 	var channelName = req.params.channelName;
 	var fcn = req.body.fcn;
 	var args = req.body.args;
+	var fcn1 = "addProduct";
+	var serialId = Math.random().toString(10).substr(2,7);
+	var certId1 = Math.random().toString(10).substr(2,5);
+	var certId2 = Math.random().toString(10).substr(2,5);
+	var certId = 'R' + certId1 + 'G' + certId2; //just added
+		if(fcn == fcn1){
+			args[0] = 'N' + serialId;
+			args[5] = certId;
+		};
 	logger.debug('channelName  : ' + channelName);
 	logger.debug('chaincodeName : ' + chaincodeName);
 	logger.debug('fcn  : ' + fcn);
 	logger.debug('args  : ' + args);
+	logger.debug('args  : ' + args[0]);
+	logger.debug('args  : ' + args[5]);
+	logger.debug('seialNo.  : ' + serialId);
+	logger.debug('certId : ' + certId);
 	if (!chaincodeName) {
 		res.json(getErrorMessage('\'chaincodeName\''));
 		return;
