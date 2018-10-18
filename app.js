@@ -267,7 +267,7 @@ app.post('/channels/:channelName/chaincodes/:chaincodeName', async function(req,
 	var serialId = Math.random().toString(10).substr(2,7);
 	var certId1 = Math.random().toString(10).substr(2,5);
 	var certId2 = Math.random().toString(10).substr(2,5);
-	var certId = 'R' + certId1 + 'G' + certId2; //just added
+	var certId = 'R' + certId1 + 'GB' + certId2; //just added
 		if(fcn == fcn1){
 			args[0] = 'N' + serialId;
 			args[5] = certId;
