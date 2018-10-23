@@ -158,6 +158,54 @@ curl -s -X POST \
 echo
 echo
 
+echo "POST request Update anchor peers on Org1"
+echo
+curl -s -X POST \
+  http://localhost:4000/channels/mychannel/anchorpeers \
+  -H "authorization: Bearer $ORG1_TOKEN" \
+  -H "content-type: application/json" \
+  -d '{
+	"configUpdatePath":"../artifacts/channel/MfgOrg1MSPanchors.tx"
+}'
+echo
+echo
+
+echo "POST request Update anchor peers on Org2"
+echo
+curl -s -X POST \
+  http://localhost:4000/channels/mychannel/anchorpeers \
+  -H "authorization: Bearer $ORG2_TOKEN" \
+  -H "content-type: application/json" \
+  -d '{
+	"configUpdatePath":"../artifacts/channel/DealerOrg2MSPanchors.tx"
+}'
+echo
+echo
+
+echo "POST request Update anchor peers on Org3"
+echo
+curl -s -X POST \
+  http://localhost:4000/channels/mychannel/anchorpeers \
+  -H "authorization: Bearer $ORG3_TOKEN" \
+  -H "content-type: application/json" \
+  -d '{
+	"configUpdatePath":"../artifacts/channel/ServiceOrg3MSPanchors.tx"
+}'
+echo
+echo
+
+echo "POST request Update anchor peers on Org4"
+echo
+curl -s -X POST \
+  http://localhost:4000/channels/mychannel/anchorpeers \
+  -H "authorization: Bearer $ORG4_TOKEN" \
+  -H "content-type: application/json" \
+  -d '{
+	"configUpdatePath":"../artifacts/channel/InsurerOrg4MSPanchors.tx"
+}'
+echo
+echo
+
 echo "POST Install chaincode on Org1"
 echo
 curl -s -X POST \
