@@ -59,7 +59,7 @@ var instantiateChaincode = async function(peers, channelName, chaincodeName, cha
                                         { role: { name: 'member', mspId: 'InsurerOrg4MSP' }}
 			        ],
 			        policy: {
-					'2-of':[{ 'signed-by': 0 }, { 'signed-by': 1 }]
+					'2-of':[{ 'signed-by': 0 }, { 'signed-by': 1 }, {'signed-by': 2}]
 			        }
 		        }
 		};

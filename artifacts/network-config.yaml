@@ -68,23 +68,30 @@ channels:
         # Default: true
         eventSource: true
 
+        # [Optional]. will this peer be the target of Discovery requests.
+        # Default: true
+        discover: true
+
       peer0.org2.dealer.com:
         endorsingPeer: true
         chaincodeQuery: true
         ledgerQuery: true
         eventSource: true
+        discover: true
 
       peer0.org3.service.com:
         endorsingPeer: true
         chaincodeQuery: true
         ledgerQuery: true
         eventSource: true
+        discover: true
 
       peer0.org4.insurer.com:
         endorsingPeer: true
         chaincodeQuery: true
         ledgerQuery: true
         eventSource: true
+        discover: true
 
       
 
@@ -121,7 +128,7 @@ organizations:
     # this way. The SDK should allow applications to set the org admin identity via APIs, and only use
     # this route as an alternative when it exists.
     adminPrivateKey:
-      path: artifacts/channel/crypto-config/peerOrganizations/org1.rolex.com/users/Admin@org1.rolex.com/msp/keystore/a981b28b7c114a8c33c3b71e1aa7c35ab43e457527888c067f3967cdc5ceb2bc_sk
+      path: artifacts/channel/crypto-config/peerOrganizations/org1.rolex.com/users/Admin@org1.rolex.com/msp/keystore/5c9e5dc3c22daa345d6018ddddb258151dc8d02d569fc8e57a737d853ba96f1e_sk
     signedCert:
       path: artifacts/channel/crypto-config/peerOrganizations/org1.rolex.com/users/Admin@org1.rolex.com/msp/signcerts/Admin@org1.rolex.com-cert.pem
   # the profile will contain public information about organizations other than the one it belongs to.
@@ -137,7 +144,7 @@ organizations:
     certificateAuthorities:
       - ca-org2
     adminPrivateKey:
-      path: artifacts/channel/crypto-config/peerOrganizations/org2.dealer.com/users/Admin@org2.dealer.com/msp/keystore/464f1dc7c25a6233280bd1c5a034cd1d4a4cb15e6317b9ef4e75e4f2d3b3447a_sk
+      path: artifacts/channel/crypto-config/peerOrganizations/org2.dealer.com/users/Admin@org2.dealer.com/msp/keystore/be695bde008cc534dc2081fee300b5975c5f31449e15e97ffc4aca6f442d2ca6_sk
     signedCert:
       path: artifacts/channel/crypto-config/peerOrganizations/org2.dealer.com/users/Admin@org2.dealer.com/msp/signcerts/Admin@org2.dealer.com-cert.pem
 
@@ -148,7 +155,7 @@ organizations:
     certificateAuthorities:
       - ca-org3
     adminPrivateKey:
-      path: artifacts/channel/crypto-config/peerOrganizations/org3.service.com/users/Admin@org3.service.com/msp/keystore/22f48556d5bd3b0180eb27f3c7367bdb96c77d9ebd6e6c6d4eee5a322dfae6d9_sk
+      path: artifacts/channel/crypto-config/peerOrganizations/org3.service.com/users/Admin@org3.service.com/msp/keystore/a91064175741305b59be8c9dd0e294744197f55fb84395980064ce657cfaf026_sk
     signedCert:
       path: artifacts/channel/crypto-config/peerOrganizations/org3.service.com/users/Admin@org3.service.com/msp/signcerts/Admin@org3.service.com-cert.pem
 
@@ -159,7 +166,7 @@ organizations:
     certificateAuthorities:
       - ca-org4
     adminPrivateKey:
-      path: artifacts/channel/crypto-config/peerOrganizations/org4.insurer.com/users/Admin@org4.insurer.com/msp/keystore/f74d87d7c316b11a1db6b68267cdcc3894d0191bc5c161c2f408d05051413be5_sk
+      path: artifacts/channel/crypto-config/peerOrganizations/org4.insurer.com/users/Admin@org4.insurer.com/msp/keystore/9c39f295dc07b927c63f27377bb893019ffebcfced37d8f83619fab42c2931c5_sk
     signedCert:
       path: artifacts/channel/crypto-config/peerOrganizations/org4.insurer.com/users/Admin@org4.insurer.com/msp/signcerts/Admin@org4.insurer.com-cert.pem
 
